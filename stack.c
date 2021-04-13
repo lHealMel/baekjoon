@@ -1,6 +1,6 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
-
+//이게 왜 되는거냐?
 int j = 0;
 int count = 0;
 int num[10001] = { 0, };
