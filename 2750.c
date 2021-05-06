@@ -2,8 +2,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-// ¾Æ¸¶ ½Ã°£º¹Àâµµ  O(n©÷)ÀÎ Á¤·Ä ¾Ë°í¸®Áò ÄÚµå
-// ¾Æ¸¶ »ðÀÔ Á¤·Ä
+// ì•„ë§ˆ ì‹œê°„ë³µìž¡ë„  O(nÂ²)ì¸ ì •ë ¬ ì•Œê³ ë¦¬ì¦˜ ì½”ë“œ
+// ì•„ë§ˆ ì‚½ìž… ì •ë ¬
 
 int main() {
 	int* arr;
@@ -16,7 +16,7 @@ int main() {
 
 	scanf("%d", &N);
 
-	arr = (int*)malloc(sizeof(int) * N); // arr[N-1]ÀÌ ÃÖ´ë
+	arr = (int*)malloc(sizeof(int) * N); // arr[N-1]ì´ ìµœëŒ€
 
 	if (arr == NULL) return -1;
 
@@ -35,16 +35,16 @@ int main() {
 			Min = arr[location];
 			j = k;
 		}
-		if (j == N - 1) {  //¼±ÅÃÇÑ ¼ö°¡ ¹è¿­ ³»¿¡¼­ °¡Àå ÀÛÀº ¼ö ÀÏ¶§ 0¿¡ ÀúÀåÇÏ°í
-			k++;           //k++¹øÂ°(1¹øÂ°)ºÎÅÍ ´Ù½Ã ¼ö¸¦ ºñ±³ÇÑ´Ù.
-			j = k;         //À§ÀÇ ÀÌÀ¯¶§¹®¿¡ j¿¡ k ´ëÀÔ
+		if (j == N - 1) {  //ì„ íƒí•œ ìˆ˜ê°€ ë°°ì—´ ë‚´ì—ì„œ ê°€ìž¥ ìž‘ì€ ìˆ˜ ì¼ë•Œ 0ì— ì €ìž¥í•˜ê³ 
+			k++;           //k++ë²ˆì§¸(1ë²ˆì§¸)ë¶€í„° ë‹¤ì‹œ ìˆ˜ë¥¼ ë¹„êµí•œë‹¤.
+			j = k;         //ìœ„ì˜ ì´ìœ ë•Œë¬¸ì— jì— k ëŒ€ìž…
 			location = k;
-			Min = arr[k];  //k++¹øÂ°(1¹øÂ°) ¼ö¸¦ ¼±ÅÃÇÏ¿© ºñ±³ ´Ù½Ã ½ÃÀÛ
+			Min = arr[k];  //k++ë²ˆì§¸(1ë²ˆì§¸) ìˆ˜ë¥¼ ì„ íƒí•˜ì—¬ ë¹„êµ ë‹¤ì‹œ ì‹œìž‘
 		}
 	}
 
 	for (int q = 0; q < N; q++) {
-		printf("%d\n", arr[q]);		//Á¤·ÄµÈ ¼ö ³ª¿­
+		printf("%d\n", arr[q]);		//ì •ë ¬ëœ ìˆ˜ ë‚˜ì—´
 	}
 
 	free(arr);
